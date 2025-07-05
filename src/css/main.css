@@ -1,0 +1,686 @@
+/* ==========================================================================
+   Main CSS - GitHub Directory Landing Page
+   The Grand Digital Architect
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS Variables - Heaven-Inspired Color System
+   ========================================================================== */
+:root {
+  /* Primary Colors */
+  --color-heaven: #FFFFFF;
+  --color-gold: #FFD700;
+  --color-sky: #87CEEB;
+  --color-wisdom: #6B46C1;
+  --color-text: #1A1A1A;
+  
+  /* Gradient Colors */
+  --gradient-ascension: linear-gradient(180deg, 
+    var(--color-heaven) 0%, 
+    rgba(135, 206, 235, 0.3) 50%, 
+    rgba(107, 70, 193, 0.2) 100%
+  );
+  
+  /* Supporting Colors */
+  --color-muted: #6B7280;
+  --color-accent: #F59E0B;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  
+  /* Typography */
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono: 'Fira Code', Consolas, Monaco, monospace;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.5);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  
+  /* Z-Index */
+  --z-particles: 1;
+  --z-content: 10;
+  --z-header: 100;
+  --z-modal: 1000;
+}
+
+/* ==========================================================================
+   Global Reset & Base Styles
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-heaven);
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--text-5xl);
+  font-family: var(--font-sans);
+}
+
+h2 {
+  font-size: var(--text-4xl);
+  font-family: var(--font-sans);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-wisdom);
+}
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section {
+  padding: var(--space-20) 0;
+  position: relative;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: var(--z-header);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  font-size: var(--text-2xl);
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-8);
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: var(--color-wisdom);
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width var(--transition-base);
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--gradient-ascension);
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: var(--z-content);
+}
+
+.hero-quote {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  line-height: 1.8;
+  color: var(--color-wisdom);
+  max-width: 800px;
+  margin: 0 auto var(--space-12);
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .hero-quote {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+  font-size: var(--text-base);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-sky));
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-wisdom);
+  border: 2px solid var(--color-wisdom);
+}
+
+.btn-secondary:hover {
+  background: var(--color-wisdom);
+  color: white;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.about-section {
+  background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.05));
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--space-12) 0;
+  position: relative;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-wisdom));
+  z-index: 0;
+}
+
+.timeline-item {
+  background: var(--color-heaven);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.timeline-emoji {
+  font-size: var(--text-3xl);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.timeline-item h3 {
+  font-size: var(--text-lg);
+  color: var(--color-wisdom);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-item p {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.about-quote {
+  text-align: center;
+  font-size: var(--text-xl);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-8);
+}
+
+/* ==========================================================================
+   Philosophy Section
+   ========================================================================== */
+.philosophy-section {
+  background: linear-gradient(180deg, rgba(135, 206, 235, 0.05), rgba(107, 70, 193, 0.05));
+}
+
+.philosophy-content {
+  display: grid;
+  gap: var(--space-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-item {
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+}
+
+.philosophy-item h3 {
+  color: var(--color-gold);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-2xl);
+}
+
+.philosophy-item p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   Projects Section
+   ========================================================================== */
+.projects-section {
+  background: linear-gradient(180deg, rgba(107, 70, 193, 0.05), transparent);
+}
+
+.project-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.category {
+  background: var(--color-heaven);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.category:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.category h3 {
+  color: var(--color-wisdom);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.project-list {
+  list-style: none;
+}
+
+.project-list li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: color var(--transition-fast);
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.project-list li:hover {
+  color: var(--color-wisdom);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background: var(--color-gold);
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-full);
+  margin-left: var(--space-2);
+}
+
+/* ==========================================================================
+   Journey Section
+   ========================================================================== */
+.journey-section {
+  background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.1));
+}
+
+.journey-subtitle {
+  text-align: center;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-8);
+  color: var(--color-muted);
+}
+
+.military-note {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-wisdom);
+  font-style: italic;
+}
+
+.journey-steps {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.journey-steps::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-gold), var(--color-wisdom));
+}
+
+.step {
+  position: relative;
+  padding: var(--space-6);
+  padding-left: var(--space-16);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  border: 4px solid var(--color-heaven);
+  box-shadow: var(--shadow-md);
+}
+
+.step h3 {
+  color: var(--color-wisdom);
+  margin-bottom: var(--space-2);
+}
+
+.step h4 {
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.step p {
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   CTA Section
+   ========================================================================== */
+.cta-section {
+  background: var(--gradient-ascension);
+  padding: var(--space-24) 0;
+}
+
+.cta-quote {
+  font-size: var(--text-2xl);
+  margin: var(--space-8) 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: var(--color-text);
+  color: var(--color-heaven);
+  padding: var(--space-12) 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer-link {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-heaven);
+}
+
+.footer-quote {
+  color: var(--color-sky);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Mobile Responsive
+   ========================================================================== */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+  }
+  
+  .timeline::before {
+    display: none;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .journey-steps::before {
+    display: none;
+  }
+  
+  .step {
+    padding-left: var(--space-6);
+  }
+  
+  .step::before {
+    display: none;
+  }
+  
+  .project-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .philosophy-item {
+    padding: var(--space-4);
+  }
+  
+  .philosophy-item h3 {
+    font-size: var(--text-xl);
+  }
+  
+  .philosophy-item p {
+    font-size: var(--text-base);
+  }
+}
+

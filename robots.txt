@@ -1,0 +1,12 @@
+# Robots.txt for The Grand Digital Architect
+# https://rexrenatus.github.io/RexRenatus.io/
+
+User-agent: *
+Allow: /
+Disallow: /src/assets/screenshots/
+
+# Sitemap location
+Sitemap: https://rexrenatus.github.io/RexRenatus.io/sitemap.xml
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1

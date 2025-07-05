@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Grand Digital Architect - A journey through knowledge acquisition and tool creation">
-    <title>The Grand Digital Architect - GitHub Directory</title>
+    <meta name="description" content="The Grand Digital Architect - A journey through knowledge acquisition and tool creation. Explore AI-powered learning systems, from military doctrine to digital innovation.">
+    <meta name="keywords" content="AI, machine learning, digital architect, learning systems, Notion, knowledge management, programming, GitHub">
+    <meta name="author" content="RexRenatus - The Grand Digital Architect">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rexrenatus.github.io/RexRenatus.io/">
+    <meta property="og:title" content="The Grand Digital Architect - Portfolio">
+    <meta property="og:description" content="While the world feared AI would make humanity obsolete, I dared to ask: How can we wield AI to amplify human intelligence?">
+    <meta property="og:image" content="https://rexrenatus.github.io/RexRenatus.io/src/assets/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rexrenatus.github.io/RexRenatus.io/">
+    <meta property="twitter:title" content="The Grand Digital Architect">
+    <meta property="twitter:description" content="A journey from military doctrine to AI innovation. Explore tools that amplify human intelligence.">
+    <meta property="twitter:image" content="https://rexrenatus.github.io/RexRenatus.io/src/assets/og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rexrenatus.github.io/RexRenatus.io/">
+    
+    <title>The Grand Digital Architect - AI-Powered Learning Systems Portfolio</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +38,38 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="src/assets/favicon.svg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RexRenatus",
+        "alternateName": "The Grand Digital Architect",
+        "description": "Military veteran turned AI innovator, creating tools that amplify human intelligence",
+        "url": "https://rexrenatus.github.io/RexRenatus.io/",
+        "image": "https://rexrenatus.github.io/RexRenatus.io/src/assets/og-image.png",
+        "sameAs": [
+            "https://github.com/RexRenatus",
+            "https://www.instagram.com/devi.nws/"
+        ],
+        "jobTitle": "Digital Architect",
+        "knowsAbout": ["AI", "Machine Learning", "Knowledge Management", "Military Doctrine", "Korean Language", "Software Engineering"],
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "Military Service"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
-    <header class="site-header">
-        <nav class="nav-container">
+    <header class="site-header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <h1>The Grand Digital Architect</h1>
             </div>
@@ -34,26 +83,27 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="particles" id="particles"></div>
+    <main id="main-content">
+    <section class="hero" role="region" aria-label="Introduction">
+        <div class="particles" id="particles" aria-hidden="true"></div>
         <div class="hero-content">
-            <blockquote class="hero-quote">
+            <blockquote class="hero-quote" cite="The Grand Digital Architect">
                 "In the beginning, a thought begat a question,<br>
                 a question begat an idea,<br>
                 an idea begat a theory,<br>
                 and the theory begat the obsession"
             </blockquote>
             <div class="hero-actions">
-                <a href="#journey" class="btn btn-primary">Enter the Journey</a>
+                <a href="#journey" class="btn btn-primary" role="button" aria-label="Scroll to journey section">Enter the Journey</a>
             </div>
         </div>
-        <div class="scroll-indicator"></div>
+        <div class="scroll-indicator" aria-hidden="true"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section section">
+    <section id="about" class="about-section section" role="region" aria-labelledby="about-heading">
         <div class="container">
-            <h2>The Grand Digital Architect</h2>
+            <h2 id="about-heading">The Grand Digital Architect</h2>
             <div class="about-content">
                 <div class="timeline">
                     <div class="timeline-item">
@@ -244,8 +294,10 @@
         </div>
     </section>
 
+    </main>
+    
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="footer-content text-center">
                 <a href="https://github.com/RexRenatus" class="footer-link" target="_blank">GitHub</a>

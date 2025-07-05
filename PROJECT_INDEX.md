@@ -15,6 +15,8 @@ GitHub_Landing_Page/
 ├── index.html                  # Main landing page HTML
 ├── .gitignore                  # Git ignore file for version control
 ├── README.md                   # Project documentation and setup guide
+├── sitemap.xml                 # XML sitemap for search engines
+├── robots.txt                  # Search engine crawler instructions
 │
 ├── /src/                       # Source code directory
 │   ├── /css/                   # Stylesheets
@@ -24,7 +26,9 @@ GitHub_Landing_Page/
 │   │   └── main.js             # Main JavaScript file
 │   │
 │   ├── /assets/                # Static assets
-│   │   └── [To be created]     # images, fonts, icons
+│   │   ├── favicon.svg         # Site favicon
+│   │   ├── hero-bg.svg         # Hero background pattern
+│   │   └── /screenshots/       # Project screenshots
 │   │
 │   └── /components/            # Reusable UI components
 │       └── [To be created]     # card.html, navbar.html, footer.html

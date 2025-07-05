@@ -175,6 +175,11 @@ cat planning/MASTER_TODO.md
   - Security rules against exposing sensitive information
   - Guidelines for consistent formatting and content accuracy
   - Requirements for maintaining valid links and instructions
+- **Updated hook scripts for case-insensitive CLAUDE.md detection**
+  - Modified pre_task_review.sh and post_task_review.sh
+  - Now accepts both claude.md and CLAUDE.md filenames
+  - Uses variable substitution for flexible file detection
+  - Fixes hook blocking issues with uppercase filenames
   - Updated project structure for frontend development
   - Changed documentation references to reflect new project scope
   - Maintained all existing rules and governance structures

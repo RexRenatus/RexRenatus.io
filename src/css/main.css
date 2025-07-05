@@ -87,6 +87,54 @@
 }
 
 /* ==========================================================================
+   Accessibility
+   ========================================================================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-wisdom);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) 0;
+  z-index: 1000;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles for better keyboard navigation */
+*:focus {
+  outline: 2px solid var(--color-wisdom);
+  outline-offset: 2px;
+}
+
+/* Only show focus outline when using keyboard */
+body:not(.keyboard-nav) *:focus {
+  outline: none;
+}
+
+body.keyboard-nav *:focus {
+  outline: 3px solid var(--color-wisdom);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(107, 70, 193, 0.2);
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
    Global Reset & Base Styles
    ========================================================================== */
 *, *::before, *::after {
@@ -239,6 +287,10 @@ h4 {
   justify-content: center;
   position: relative;
   background: var(--gradient-ascension);
+  background-image: url('../assets/hero-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -302,6 +354,44 @@ h4 {
 .btn-secondary:hover {
   background: var(--color-wisdom);
   color: white;
+}
+
+/* ==========================================================================
+   Particles
+   ========================================================================== */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: var(--z-particles);
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatUp 20s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(1.5);
+  }
 }
 
 /* ==========================================================================

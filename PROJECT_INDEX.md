@@ -14,6 +14,7 @@ GitHub_Landing_Page/
 ├── PROJECT_INDEX.md            # This file - complete project map
 ├── index.html                  # Main landing page HTML
 ├── .gitignore                  # Git ignore file for version control
+├── README.md                   # Project documentation and setup guide
 │
 ├── /src/                       # Source code directory
 │   ├── /css/                   # Stylesheets

@@ -164,6 +164,17 @@ cat planning/MASTER_TODO.md
   - Requires HEREDOC format for multi-line commits
   - Enforces co-author attribution and emoji standards
   - Adds post-commit tracking in MASTER_TODO.md and PROJECT_JOURNAL.md
+- **Created comprehensive README.md file**
+  - Professional portfolio documentation with badges
+  - Complete feature list and technology stack
+  - Installation and usage instructions
+  - Project philosophy and connection links
+- **Added README Maintenance rule set** (readme-1 through readme-15)
+  - Ensures README stays synchronized with project changes
+  - Mandates updates for structural and feature changes
+  - Security rules against exposing sensitive information
+  - Guidelines for consistent formatting and content accuracy
+  - Requirements for maintaining valid links and instructions
   - Updated project structure for frontend development
   - Changed documentation references to reflect new project scope
   - Maintained all existing rules and governance structures
@@ -373,6 +384,24 @@ cat planning/MASTER_TODO.md
     <rule id="git-13" priority="normal">For initial commits, include comprehensive feature list in message</rule>
     <rule id="git-14" priority="critical">Never expose private SSH keys or authentication tokens in commits</rule>
     <rule id="git-15" priority="mandatory">After major commits, remind user to check GitHub Actions and deployment status</rule>
+  </rule-set>
+
+  <rule-set name="README Maintenance">
+    <rule id="readme-1" priority="critical">README.md must exist in the root directory for GitHub visibility</rule>
+    <rule id="readme-2" priority="critical">Update README.md whenever project structure changes significantly</rule>
+    <rule id="readme-3" priority="mandatory">Keep project feature list synchronized with actual implementation</rule>
+    <rule id="readme-4" priority="mandatory">Update technology stack section when new tools/libraries are added</rule>
+    <rule id="readme-5" priority="critical">Ensure all links in README are valid and functional</rule>
+    <rule id="readme-6" priority="mandatory">Update installation instructions if setup process changes</rule>
+    <rule id="readme-7" priority="normal">Include badges for build status, version, and social links</rule>
+    <rule id="readme-8" priority="mandatory">Document any new environment variables or configuration requirements</rule>
+    <rule id="readme-9" priority="critical">Never include sensitive information (keys, passwords, tokens) in README</rule>
+    <rule id="readme-10" priority="mandatory">Add new sections for major features as they are implemented</rule>
+    <rule id="readme-11" priority="normal">Use consistent markdown formatting and heading hierarchy</rule>
+    <rule id="readme-12" priority="mandatory">Update project philosophy section if core mission changes</rule>
+    <rule id="readme-13" priority="critical">Ensure README accurately reflects current project state, not aspirational</rule>
+    <rule id="readme-14" priority="mandatory">Include clear contributing guidelines and contact information</rule>
+    <rule id="readme-15" priority="normal">Add screenshots or GIFs when visual features are implemented</rule>
   </rule-set>
 </master-rules>
 

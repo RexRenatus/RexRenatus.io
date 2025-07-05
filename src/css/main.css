@@ -30,8 +30,8 @@
   
   /* Typography */
   --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-mono: 'Fira Code', Consolas, Monaco, monospace;
+  --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
   
   /* Font Sizes */
   --text-xs: 0.75rem;
@@ -103,10 +103,13 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.7;
   color: var(--color-text);
   background-color: var(--color-heaven);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ==========================================================================
@@ -139,7 +142,10 @@ h4 {
 .quote {
   font-family: var(--font-serif);
   font-style: italic;
+  font-weight: 400;
   color: var(--color-wisdom);
+  letter-spacing: 0.02em;
+  line-height: 1.9;
 }
 
 /* ==========================================================================
@@ -243,8 +249,11 @@ h4 {
 
 .hero-quote {
   font-family: var(--font-serif);
-  font-size: var(--text-3xl);
-  line-height: 1.8;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
   color: var(--color-wisdom);
   max-width: 800px;
   margin: 0 auto var(--space-12);
@@ -443,7 +452,14 @@ h4 {
 
 .philosophy-item p {
   font-size: var(--text-lg);
-  line-height: 1.8;
+  line-height: 1.9;
+}
+
+.philosophy-item .quote {
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 /* ==========================================================================
@@ -497,6 +513,19 @@ h4 {
 
 .project-list li:hover {
   color: var(--color-wisdom);
+}
+
+.project-list a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  border-bottom: 2px solid transparent;
+}
+
+.project-list a:hover {
+  color: var(--color-wisdom);
+  border-bottom-color: var(--color-gold);
 }
 
 .badge {

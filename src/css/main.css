@@ -509,6 +509,31 @@ h4 {
   margin-left: var(--space-2);
 }
 
+.coming-soon {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-sky));
+  color: var(--color-heaven);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-left: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
 /* ==========================================================================
    Journey Section
    ========================================================================== */

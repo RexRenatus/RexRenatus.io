@@ -157,6 +157,13 @@ cat planning/MASTER_TODO.md
 - **Adapted CLAUDE.md for GitHub Landing Page Project**
   - Updated project overview from Notion Learning System to GitHub Directory Landing Page
   - Modified core principles to focus on web development best practices
+- **Added Git Commit and Push Operations rule set** (git-1 through git-15)
+  - Standardizes Git workflow with status checks before commits
+  - Mandates descriptive commit messages with proper formatting
+  - Includes security rules for SSH keys and authentication
+  - Requires HEREDOC format for multi-line commits
+  - Enforces co-author attribution and emoji standards
+  - Adds post-commit tracking in MASTER_TODO.md and PROJECT_JOURNAL.md
   - Updated project structure for frontend development
   - Changed documentation references to reflect new project scope
   - Maintained all existing rules and governance structures
@@ -348,6 +355,24 @@ cat planning/MASTER_TODO.md
     <rule id="create-8" priority="critical">File paths in PROJECT_INDEX.md must be absolute from project root for clarity</rule>
     <rule id="create-9" priority="mandatory">Add descriptive comments in PROJECT_INDEX.md explaining each file's purpose</rule>
     <rule id="create-10" priority="critical">Review PROJECT_INDEX.md before any file operation to ensure consistency</rule>
+  </rule-set>
+
+  <rule-set name="Git Commit and Push Operations">
+    <rule id="git-1" priority="critical">ALWAYS check git status before committing to understand changes</rule>
+    <rule id="git-2" priority="critical">Use descriptive commit messages explaining WHAT changed and WHY</rule>
+    <rule id="git-3" priority="mandatory">Include emoji and co-author attribution in commit messages per standard format</rule>
+    <rule id="git-4" priority="critical">Never commit with --force or --force-with-lease unless explicitly requested by user</rule>
+    <rule id="git-5" priority="mandatory">Run git pull before push to avoid conflicts (handle merge vs rebase appropriately)</rule>
+    <rule id="git-6" priority="critical">Verify SSH authentication is working before attempting push operations</rule>
+    <rule id="git-7" priority="mandatory">Use git add -A for staging all changes unless specific files requested</rule>
+    <rule id="git-8" priority="normal">Show git status output to user before committing for confirmation</rule>
+    <rule id="git-9" priority="critical">If push fails, diagnose issue (auth, conflicts, etc) before retrying</rule>
+    <rule id="git-10" priority="mandatory">Update MASTER_TODO.md and PROJECT_JOURNAL.md after successful push</rule>
+    <rule id="git-11" priority="critical">Use HEREDOC format for multi-line commit messages to preserve formatting</rule>
+    <rule id="git-12" priority="mandatory">Include "🤖 Generated with Claude Code" and co-author in commits</rule>
+    <rule id="git-13" priority="normal">For initial commits, include comprehensive feature list in message</rule>
+    <rule id="git-14" priority="critical">Never expose private SSH keys or authentication tokens in commits</rule>
+    <rule id="git-15" priority="mandatory">After major commits, remind user to check GitHub Actions and deployment status</rule>
   </rule-set>
 </master-rules>
 

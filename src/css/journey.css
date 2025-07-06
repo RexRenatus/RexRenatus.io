@@ -1,0 +1,520 @@
+/* ==========================================================================
+   Journey Pages Styles (Language, Art, Certifications)
+   The Grand Digital Architect
+   ========================================================================== */
+
+/* Language Hero */
+.language-hero {
+  background: var(--gradient-ascension);
+  padding: var(--space-24) 0 var(--space-16) 0;
+  margin-top: 80px;
+}
+
+.page-title .subtitle {
+  display: block;
+  font-size: var(--text-2xl);
+  margin-top: var(--space-2);
+  opacity: 0.8;
+}
+
+/* Progress Overview */
+.progress-overview {
+  padding: var(--space-16) 0;
+}
+
+.progress-circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.progress-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-percentage {
+  display: block;
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-wisdom);
+}
+
+.progress-label {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+.progress-stats {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.stat-label {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-1);
+}
+
+/* Skills Section */
+.skills-section {
+  background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.05), transparent);
+  padding: var(--space-16) 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.skill-card {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.skill-progress {
+  margin-bottom: var(--space-4);
+}
+
+.skill-description {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* Milestones Timeline */
+.milestones-section {
+  padding: var(--space-16) 0;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-gold), var(--color-wisdom));
+}
+
+.milestone {
+  position: relative;
+  padding: var(--space-6) 0;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  border: 3px solid white;
+  box-shadow: var(--shadow-sm);
+}
+
+.milestone.achieved::before {
+  background: var(--color-success);
+}
+
+.milestone.current::before {
+  background: var(--color-gold);
+  animation: pulse 2s infinite;
+}
+
+.milestone.future::before {
+  background: white;
+  border-color: var(--color-muted);
+}
+
+.milestone-date {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.milestone-content {
+  background: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.milestone-content h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.milestone-content p {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Resources Section */
+.resources-section {
+  background: linear-gradient(180deg, rgba(107, 70, 193, 0.03), transparent);
+  padding: var(--space-16) 0;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.resource-card {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.resource-icon {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-3);
+}
+
+.resource-card h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.resource-card ul {
+  list-style: none;
+  font-size: var(--text-base);
+  color: var(--color-muted);
+}
+
+.resource-card li {
+  padding: var(--space-2) 0;
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.resource-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+}
+
+/* Daily Routine */
+.routine-section {
+  padding: var(--space-16) 0;
+}
+
+.routine-timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.routine-item {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.time {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-gold);
+  min-width: 80px;
+}
+
+.activity {
+  flex: 1;
+  background: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.activity h4 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+}
+
+.activity p {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Korean Text Support */
+.translation {
+  display: block;
+  font-size: var(--text-base);
+  opacity: 0.8;
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
+/* Art Journey Specific */
+.art-hero {
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+  padding: var(--space-24) 0 var(--space-16) 0;
+  margin-top: 80px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  aspect-ratio: 1;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Certifications Specific */
+.cert-hero {
+  background: linear-gradient(135deg, #667EEA, #764BA2);
+  padding: var(--space-24) 0 var(--space-16) 0;
+  margin-top: 80px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-6);
+}
+
+.cert-card {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card.completed {
+  border: 2px solid var(--color-success);
+}
+
+.cert-card.in-progress {
+  border: 2px solid var(--color-gold);
+}
+
+.cert-status {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-success);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.cert-card.in-progress .cert-status {
+  background: var(--color-gold);
+  color: var(--color-text);
+}
+
+/* Gallery Placeholder */
+.gallery-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.gallery-placeholder span {
+  font-size: var(--text-5xl);
+  margin-bottom: var(--space-2);
+}
+
+.gallery-placeholder p {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.gallery-note {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+/* Certification Specific Styles */
+.cert-details {
+  margin: var(--space-4) 0;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.cert-details p {
+  margin: var(--space-1) 0;
+}
+
+.cert-issuer {
+  font-weight: 600;
+  color: var(--color-wisdom);
+}
+
+.cert-description {
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.cert-skills span {
+  background: rgba(107, 70, 193, 0.1);
+  color: var(--color-wisdom);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.study-plan {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.study-plan h4 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+}
+
+.study-plan ul {
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.study-plan li {
+  padding: var(--space-1) 0;
+  color: var(--color-muted);
+}
+
+.study-plan li.completed {
+  color: var(--color-success);
+}
+
+.study-plan li.active {
+  color: var(--color-wisdom);
+  font-weight: 600;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .progress-circle-container {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  
+  .progress-stats {
+    justify-content: center;
+  }
+  
+  .skills-grid,
+  .resources-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline {
+    padding-left: var(--space-4);
+  }
+  
+  .routine-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .time {
+    min-width: auto;
+  }
+}

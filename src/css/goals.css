@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Goals Page Specific Styles
+   The Grand Digital Architect
+   ========================================================================== */
+
+/* Goals Hero */
+.goals-hero {
+  background: var(--gradient-ascension);
+  padding: var(--space-24) 0 var(--space-16) 0;
+  margin-top: 80px; /* Account for fixed header */
+}
+
+.page-title {
+  font-size: var(--text-5xl);
+  text-align: center;
+  margin-bottom: var(--space-4);
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: var(--text-xl);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Progress Stats */
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.stat-card {
+  background: white;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.stat-emoji {
+  font-size: var(--text-4xl);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.stat-card h3 {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.stat-number {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-wisdom);
+}
+
+/* Goals Sections */
+.goals-section {
+  padding: var(--space-16) 0;
+}
+
+.goals-section.alt-bg {
+  background: linear-gradient(180deg, transparent, rgba(135, 206, 235, 0.05), transparent);
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Goal Cards */
+.goal-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.goal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.goal-card.in-progress {
+  border-left: 4px solid var(--color-gold);
+}
+
+.goal-card.planning {
+  border-left: 4px solid var(--color-sky);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: var(--space-4);
+}
+
+.goal-header h3 {
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.goal-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-sky));
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Progress Bar */
+.goal-progress {
+  margin: var(--space-4) 0;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-wisdom));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.progress-text {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+/* Goal Description */
+.goal-description {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Goal Milestones */
+.goal-milestones {
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.goal-milestones li {
+  padding: var(--space-2) 0;
+  color: var(--color-muted);
+}
+
+.goal-milestones li.completed {
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.goal-milestones li.active {
+  color: var(--color-wisdom);
+  font-weight: 600;
+}
+
+/* Planning Timeline */
+.planning-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: var(--space-4);
+}
+
+.timeline-label {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.timeline-date {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-wisdom);
+}
+
+/* Completed Goals Timeline */
+.goals-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-year {
+  margin-bottom: var(--space-12);
+}
+
+.timeline-year h3 {
+  font-size: var(--text-2xl);
+  color: var(--color-gold);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.completed-goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.completed-goal {
+  background: rgba(255, 255, 255, 0.8);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-success);
+  position: relative;
+}
+
+.completion-date {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.completed-goal h4 {
+  font-size: var(--text-lg);
+  margin: var(--space-2) 0;
+  color: var(--color-text);
+}
+
+.completed-goal p {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* Logo Link */
+.logo h1 a {
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(135deg, var(--color-wisdom), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Active nav link */
+.nav-menu a.active {
+  color: var(--color-wisdom);
+  font-weight: 600;
+}
+
+.nav-menu a.active::after {
+  width: 100%;
+  background: var(--color-gold);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: var(--text-4xl);
+  }
+  
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .goal-header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .completed-goal {
+    padding: var(--space-4);
+  }
+}

@@ -15,15 +15,22 @@ GitHub_Landing_Page/
 ├── index.html                  # Main landing page HTML
 ├── .gitignore                  # Git ignore file for version control
 ├── README.md                   # Project documentation and setup guide
+├── CHANGELOG.md                # Project change log and version history
 ├── sitemap.xml                 # XML sitemap for search engines
 ├── robots.txt                  # Search engine crawler instructions
+├── goals.html                  # Goals tracking page (in-progress, planning, completed)
+├── blog.html                   # Blog homepage with article listings
+├── language-journey.html       # Korean language learning journey
+├── art-journey.html            # Art and creative journey documentation
+├── certifications.html         # Professional certifications tracker
 │
 ├── /src/                       # Source code directory
 │   ├── /css/                   # Stylesheets
 │   │   └── main.css            # Main stylesheet with design system
 │   │
 │   ├── /js/                    # JavaScript modules
-│   │   └── main.js             # Main JavaScript file
+│   │   ├── main.js             # Main JavaScript file
+│   │   └── blog.js             # Blog page functionality
 │   │
 │   ├── /assets/                # Static assets
 │   │   ├── favicon.svg         # Site favicon
@@ -32,6 +39,12 @@ GitHub_Landing_Page/
 │   │
 │   └── /components/            # Reusable UI components
 │       └── [To be created]     # card.html, navbar.html, footer.html
+│
+├── /blog/                      # Blog posts directory
+│   ├── /posts/                 # Individual blog posts
+│   │   └── [To be created]     # YYYY-MM-DD-post-title.html format
+│   └── /assets/                # Blog-specific images and media
+│       └── [To be created]
 │
 ├── /docs/                      # Technical documentation
 │   └── [To be created]         # API docs, component docs, setup guide

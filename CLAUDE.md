@@ -37,6 +37,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Project Management
 - **Master Todo**: `/planning/MASTER_TODO.md` ✅ - Always keep updated!
 - **Project Journal**: `/planning/PROJECT_JOURNAL.md` 📖 - Step-by-step history
+- **Change Log**: `/CHANGELOG.md` 📝 - Version history and updates
 - **Development Roadmap**: `[To be created]` 🗺️ - Implementation plan
 
 ## 🛠️ Development Guidelines
@@ -115,86 +116,7 @@ cat planning/MASTER_TODO.md
 
 ## 📝 Change Log
 
-### 2025-07-04
-- Initial CLAUDE.md created
-- Updated with modular documentation pattern
-- Added project structure and guidelines
-- Implemented critical documentation section
-- Added change log for tracking updates
-- **Phase 1 Completed**: All pseudocode and design documents finalized
-- Added 10 database designs with complete schemas
-- Created implementation-ready Notion schemas
-- Designed innovative Process Pipeline System
-- Comprehensive requirements analysis with AI Epiphany engine
-- Implemented PROJECT_JOURNAL.md with session summaries
-- Added mandatory session summary rule
-- Created comprehensive project flowcharts
-- **Implemented XML formatting for all rules**
-- Added Master Rules Reference section
-- **Incorporated comprehensive AI operating principles**:
-  - Code Quality Standards (error handling, docstrings, preconditions)
-  - Documentation Protocols (synchronization, consistency, executability)
-  - Task Management Rules (clarity, assignment, dependencies)
-  - Security Compliance Guidelines (no hardcoded credentials, input validation)
-  - Process Execution Requirements (logging, resource limits, retry logic)
-  - Core Operational Principles (evidence-based decisions, traceability)
-  - Design Philosophy (KISS, YAGNI, SOLID principles)
-  - System Extension Guidelines (compatibility, testing, versioning)
-  - Quality Assurance Procedures (review requirements, user clarity)
-  - Testing & Simulation Rules (coverage, CI/CD, regression tests)
-  - Change Tracking & Governance (audit trails, rollback plans)
-
-### 2025-07-05
-- **Added Pre-Execution Planning rule set** (plan-1 through plan-10)
-  - Ensures rule compliance verification before any file operation
-  - Emphasizes planning and precondition validation
-  - Promotes atomic, trackable task breakdown
-- **Added Backward Compatibility and Issue Resolution rule set** (compat-1 through compat-10)
-  - Ensures proper handling when missing components are discovered in later phases
-  - Mandates updating all previous documentation to prevent future issues
-  - Creates systematic approach for retroactive fixes
-  - Example: Missing relations between Goals↔Actions and Subjects↔Sessions discovered in Phase 3
-- **Adapted CLAUDE.md for GitHub Landing Page Project**
-  - Updated project overview from Notion Learning System to GitHub Directory Landing Page
-  - Modified core principles to focus on web development best practices
-- **Added Git Commit and Push Operations rule set** (git-1 through git-15)
-  - Standardizes Git workflow with status checks before commits
-  - Mandates descriptive commit messages with proper formatting
-  - Includes security rules for SSH keys and authentication
-  - Requires HEREDOC format for multi-line commits
-  - Enforces co-author attribution and emoji standards
-  - Adds post-commit tracking in MASTER_TODO.md and PROJECT_JOURNAL.md
-- **Created comprehensive README.md file**
-  - Professional portfolio documentation with badges
-  - Complete feature list and technology stack
-  - Installation and usage instructions
-  - Project philosophy and connection links
-- **Added README Maintenance rule set** (readme-1 through readme-15)
-  - Ensures README stays synchronized with project changes
-  - Mandates updates for structural and feature changes
-  - Security rules against exposing sensitive information
-  - Guidelines for consistent formatting and content accuracy
-  - Requirements for maintaining valid links and instructions
-- **Updated hook scripts for case-insensitive CLAUDE.md detection**
-  - Modified pre_task_review.sh and post_task_review.sh
-  - Now accepts both claude.md and CLAUDE.md filenames
-  - Uses variable substitution for flexible file detection
-  - Fixes hook blocking issues with uppercase filenames
-  - Updated project structure for frontend development
-  - Changed documentation references to reflect new project scope
-  - Maintained all existing rules and governance structures
-- **Added Hook and Prerequisite Management rule set** (hook-1 through hook-10)
-  - Addresses pre-commit hook blocking issues encountered during file creation
-  - Mandates creating MASTER_TODO.md and PROJECT_JOURNAL.md before other operations
-  - Provides fallback strategies when Write tool is blocked (Bash heredoc, cat commands)
-  - Ensures proper file creation sequence to avoid hook conflicts
-  - Documents case sensitivity considerations for hook requirements
-- **Added File Creation Sequence rule set** (create-1 through create-10)
-  - CRITICAL: Must update PROJECT_INDEX.md BEFORE creating any new files
-  - Prevents compliance check failures by hardcoding file locations
-  - Establishes PROJECT_INDEX.md as source of truth for all file paths
-  - Mandates specific sequence: Index → Create → Read → Write
-  - Ensures hook compliance through proper documentation
+See `/CHANGELOG.md` for complete change history.
 
 ---
 
@@ -362,15 +284,15 @@ cat planning/MASTER_TODO.md
 
   <rule-set name="File Creation Sequence">
     <rule id="create-1" priority="critical">BEFORE creating ANY new file, ALWAYS update PROJECT_INDEX.md FIRST with the planned file path and description</rule>
-    <rule id="create-2" priority="critical">File locations must be hardcoded in PROJECT_INDEX.md to prevent compliance check failures</rule>
-    <rule id="create-3" priority="mandatory">Follow this exact sequence: 1) Update PROJECT_INDEX.md, 2) Create file with touch/mkdir, 3) Read empty file, 4) Write content</rule>
-    <rule id="create-4" priority="critical">Never create files without first documenting them in PROJECT_INDEX.md - this prevents hook blocking</rule>
+    <rule id="create-2" priority="critical">Files documented in PROJECT_INDEX.md are considered "planned" and hooks should allow their creation</rule>
+    <rule id="create-3" priority="mandatory">Follow this exact sequence: 1) Update PROJECT_INDEX.md, 2) Create file (touch or Write), 3) Add content</rule>
+    <rule id="create-4" priority="critical">PROJECT_INDEX.md serves as the source of truth for planned file structure</rule>
     <rule id="create-5" priority="mandatory">If creating multiple related files, update PROJECT_INDEX.md with ALL files before creating any</rule>
-    <rule id="create-6" priority="critical">PROJECT_INDEX.md serves as the source of truth for file locations - keep it synchronized</rule>
+    <rule id="create-6" priority="critical">Supporting files (CSS/JS for HTML pages) can be created without prior documentation if parent file exists</rule>
     <rule id="create-7" priority="mandatory">When removing files, update PROJECT_INDEX.md immediately to reflect the change</rule>
-    <rule id="create-8" priority="critical">File paths in PROJECT_INDEX.md must be absolute from project root for clarity</rule>
+    <rule id="create-8" priority="critical">File paths in PROJECT_INDEX.md should be relative from project root for clarity</rule>
     <rule id="create-9" priority="mandatory">Add descriptive comments in PROJECT_INDEX.md explaining each file's purpose</rule>
-    <rule id="create-10" priority="critical">Review PROJECT_INDEX.md before any file operation to ensure consistency</rule>
+    <rule id="create-10" priority="critical">Hook scripts should check PROJECT_INDEX.md to allow creation of documented files</rule>
   </rule-set>
 
   <rule-set name="Git Commit and Push Operations">
@@ -407,6 +329,19 @@ cat planning/MASTER_TODO.md
     <rule id="readme-13" priority="critical">Ensure README accurately reflects current project state, not aspirational</rule>
     <rule id="readme-14" priority="mandatory">Include clear contributing guidelines and contact information</rule>
     <rule id="readme-15" priority="normal">Add screenshots or GIFs when visual features are implemented</rule>
+  </rule-set>
+
+  <rule-set name="Post-Task Review Compliance">
+    <rule id="review-1" priority="critical">ALWAYS check post_task_review.sh output after any operation</rule>
+    <rule id="review-2" priority="critical">Address ALL critical violations immediately before proceeding</rule>
+    <rule id="review-3" priority="mandatory">Fix warnings shown in post-task review before starting next task</rule>
+    <rule id="review-4" priority="critical">If new files are created, update PROJECT_INDEX.md immediately</rule>
+    <rule id="review-5" priority="mandatory">When syntax errors appear in hook output, fix them in the same session</rule>
+    <rule id="review-6" priority="critical">Never ignore compliance violations - they compound over time</rule>
+    <rule id="review-7" priority="mandatory">Document any hook fixes or workarounds in PROJECT_JOURNAL.md</rule>
+    <rule id="review-8" priority="critical">Treat post-task review as a mandatory checkpoint, not optional feedback</rule>
+    <rule id="review-9" priority="mandatory">If violations repeat, update relevant rules to prevent recurrence</rule>
+    <rule id="review-10" priority="critical">Complete all compliance fixes before marking any task as complete</rule>
   </rule-set>
 </master-rules>
 

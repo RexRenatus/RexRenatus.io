@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 🎯 Project Overview
 
 **Project**: The Grand Digital Architect - Personal Portfolio  
-**Purpose**: A philosophical developer portfolio showcasing the journey from military service through AI revolution to digital creation  
-**Status**: 🚧 Personal Portfolio Development (Active)
+**Purpose**: {{PROJECT_PURPOSE}}
+**Status**: {{PROJECT_STATUS}}
 
 ## 📚 CRITICAL DOCUMENTATION PATTERN
 
@@ -58,35 +58,41 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   <rule priority="normal">Add references to this file for critical docs</rule>
   <rule priority="normal">Use descriptive file names with CAPS for visibility</rule>
   <rule priority="normal">Include "Last Updated" dates on all docs</rule>
-  <rule priority="critical">Update MASTER_TODO.md after completing ANY task</rule>
-  <rule priority="critical">Add entries to PROJECT_JOURNAL.md for significant progress</rule>
-  <rule priority="normal">Create flowcharts for complex processes using Mermaid syntax</rule>
-  <rule priority="mandatory">
-    Add "Session Summary" to PROJECT_JOURNAL.md at end of each work session including:
-    - What was accomplished
-    - Key metrics (files created, time spent, etc.)
-    - Where to continue next session
-    - Specific next steps with references
-  </rule>
-</documentation-rules>
 
 ### Project Structure
 ```
-/src/                  # Source code directory
-  /css/                # Stylesheets and design system
-  /js/                 # JavaScript modules and logic
-  /assets/             # Images, fonts, and media
-  /components/         # Reusable UI components
-/docs/                 # Technical documentation
-/planning/             # Project management
-/tests/                # Unit and integration tests
-index.html             # Main landing page
+{{PROJECT_STRUCTURE}}
 ```
 
 ## 🔄 Current Development Status
 
-**Initial Setup Phase** 🚧 IN PROGRESS
-- ✅ CLAUDE.md adapted for GitHub Landing Page project
+**{{CURRENT_PHASE}}** {{STATUS_EMOJI}} {{STATUS_TEXT}}
+{{CURRENT_STATUS_DETAILS}}
+
+**Next Steps**: {{NEXT_STEPS}}
+
+## 🚀 Quick Commands
+
+```bash
+{{PROJECT_COMMANDS}}
+```
+
+## 📝 Project-Specific Rules
+
+<project-specific-rules>
+  <\!-- Add rules specific to this project type -->
+  {{PROJECT_SPECIFIC_RULES}}
+</project-specific-rules>
+
+## 📝 Change Log
+
+### {{CURRENT_DATE}}
+- Initial CLAUDE.md created from template
+- Adapted for {{PROJECT_TYPE}} project
+- {{INITIAL_CHANGES}}
+
+---
+
 - ⏳ Project structure to be created
 - ⏳ Basic HTML structure pending
 - ⏳ CSS design system pending

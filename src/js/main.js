@@ -43,7 +43,9 @@ class ParticleSystem {
     }
     
     createParticles() {
-        const particleCount = 50;
+        // Reduce particles on mobile for better performance
+        const isMobile = window.innerWidth <= 768;
+        const particleCount = isMobile ? 20 : 50;
         
         for (let i = 0; i < particleCount; i++) {
             this.particles.push({

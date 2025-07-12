@@ -1,6 +1,6 @@
 # PROJECT_INDEX.md 📑
 
-**Last Updated**: 2025-07-05
+**Last Updated**: 2025-07-06
 
 ## 📁 Project Structure Overview
 
@@ -12,6 +12,8 @@ This document provides a complete map of all files and directories in the GitHub
 GitHub_Landing_Page/
 ├── CLAUDE.md                    # AI assistant guidance and project rules
 ├── PROJECT_INDEX.md            # This file - complete project map
+├── pre_task_review.sh          # Pre-task compliance checking hook
+├── post_task_review.sh         # Post-task compliance verification hook
 ├── index.html                  # Main landing page HTML
 ├── .gitignore                  # Git ignore file for version control
 ├── README.md                   # Project documentation and setup guide
@@ -29,7 +31,8 @@ GitHub_Landing_Page/
 │   │   └── main.css            # Main stylesheet with design system
 │   │
 │   ├── /js/                    # JavaScript modules
-│   │   ├── main.js             # Main JavaScript file
+│   │   ├── main.js             # Main JavaScript file (with particle system)
+│   │   ├── main-enhanced.js    # Enhanced version with performance optimizations
 │   │   └── blog.js             # Blog page functionality
 │   │
 │   ├── /assets/                # Static assets
@@ -47,13 +50,21 @@ GitHub_Landing_Page/
 │       └── [To be created]
 │
 ├── /docs/                      # Technical documentation
+│   ├── README_TEMPLATE.md      # Standard README format for all projects
+│   ├── /templates/             # Claude integration templates
+│   │   ├── README.md           # Template usage documentation
+│   │   ├── CLAUDE_TEMPLATE.md  # Template CLAUDE.md for new projects
+│   │   ├── pre_task_review_template.sh  # Template pre-task hook
+│   │   ├── post_task_review_template.sh # Template post-task hook
+│   │   └── claude_init.sh      # Intelligent project initialization script
 │   └── [To be created]         # API docs, component docs, setup guide
 │
 ├── /planning/                  # Project management
 │   ├── MASTER_TODO.md          # Task tracking
 │   ├── PROJECT_JOURNAL.md      # Development history
 │   ├── CREATOR_QUESTIONNAIRE.md # Creator info & vision
-│   └── LANDING_PAGE_DESIGN.md  # Comprehensive design plan
+│   ├── LANDING_PAGE_DESIGN.md  # Comprehensive design plan
+│   └── DEVELOPMENT_ROADMAP.md  # Detailed task breakdown with milestones
 │
 └── /tests/                     # Test files
     └── [To be created]         # unit tests, integration tests

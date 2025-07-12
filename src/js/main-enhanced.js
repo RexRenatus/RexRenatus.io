@@ -934,8 +934,8 @@ document.addEventListener('DOMContentLoaded', () => {
  * Calculates and displays years of active duty service
  */
 function initMilitaryServiceCounter() {
-    // Replace with actual service start date
-    const serviceStartDate = new Date('2018-01-01'); // Update with actual date
+    // Military service start date: July 2020
+    const serviceStartDate = new Date('2020-07-01');
     const currentDate = new Date();
     const yearsDiff = currentDate.getFullYear() - serviceStartDate.getFullYear();
     const monthsDiff = currentDate.getMonth() - serviceStartDate.getMonth();

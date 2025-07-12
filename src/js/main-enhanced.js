@@ -722,7 +722,7 @@ class LoadingSystem {
         
         images.forEach(img => {
             // Wrap image in container if not already wrapped
-            if (\!img.parentElement.classList.contains('image-container')) {
+            if (!img.parentElement.classList.contains('image-container')) {
                 const container = document.createElement('div');
                 container.className = 'image-container';
                 img.parentNode.insertBefore(container, img);
@@ -855,7 +855,7 @@ class ProjectShowcase {
             
             // Add loading indicator on hover
             link.addEventListener('mouseenter', () => {
-                if (\!container.dataset.loaded) {
+                if (!container.dataset.loaded) {
                     this.loadProjectPreview(link.href, container);
                 }
             });
@@ -924,5 +924,30 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Keyboard navigation
     initKeyboardNav();
+    
+    // Military service years
+    initMilitaryServiceCounter();
 });
-EOF < /dev/null
+
+/**
+ * Military Service Years Counter
+ * Calculates and displays years of active duty service
+ */
+function initMilitaryServiceCounter() {
+    // Replace with actual service start date
+    const serviceStartDate = new Date('2018-01-01'); // Update with actual date
+    const currentDate = new Date();
+    const yearsDiff = currentDate.getFullYear() - serviceStartDate.getFullYear();
+    const monthsDiff = currentDate.getMonth() - serviceStartDate.getMonth();
+    
+    let yearsOfService = yearsDiff;
+    if (monthsDiff < 0 || (monthsDiff === 0 && currentDate.getDate() < serviceStartDate.getDate())) {
+        yearsOfService--;
+    }
+    
+    // Find the military timeline item and update it
+    const militaryTimelineItem = document.querySelector('.timeline-item:nth-child(2) p');
+    if (militaryTimelineItem && militaryTimelineItem.textContent.includes('Military service continues')) {
+        militaryTimelineItem.innerHTML = `${yearsOfService}+ years active duty<br><small>Service continues</small>`;
+    }
+}
